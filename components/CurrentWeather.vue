@@ -3,7 +3,7 @@
         <div class="wrapper" v-if="weatherData.name">
             <h2 class="today-weather__location">{{ `${weatherData.name}, ${weatherData.country}` }}</h2>  
             <div class="today-weather__current-weather current-weather">
-                <h3 class="current-weather__date section-block-header">{{ dateFormatter.format(weatherData.dt) }}</h3>
+                <h3 class="current-weather__date section-block-header">{{ dateFormatter.format(weatherData.dt * 1000) }}</h3>
                 <div class="current-weather__weather-data">
                     <div class="current-weather__weather">
                         <img class="current-weather__icon" :src="`https://openweathermap.org/img/wn/${weatherData.weather.icon}@2x.png`" alt="Mostly sunny">
